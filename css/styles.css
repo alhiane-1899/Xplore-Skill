@@ -397,6 +397,111 @@ nav input {
     }
 }
 /* end cta section */
+/* start our post */
+.our-post {
+    padding: 5rem 0;
+}
+.post-grid {
+    margin: 0 -15px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 30px;
+}
+.left-col {
+    padding: 0 15px;
+    grid-column: span 812;
+}
+.right-col {
+    padding: 0 15px;
+    grid-column: span 12;
+}
+@media screen and (min-width: 992px) {
+    .left-col {
+        grid-column: span 8;
+    }
+    .right-col {
+        grid-column: span 4;
+    }
+}
+.post-name {
+    font-size: 1.25rem;
+    line-height: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+.post-date {
+    display: block;
+    color: var(--primary-clr);
+    margin-bottom: 7px;
+}
+.post-img {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.post-desc {
+    margin-bottom: 25px;
+}
+.post-form {
+    padding: 1.5rem 1.25rem;
+    border: 1px solid #eee;
+}
+.post-form .form-label {
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.post-form input:not(:last-child),
+.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #eee;
+    margin-bottom: 15px;
+}
+.post-form textarea {
+    height: 120px;
+    resize: none;
+}
+.post-form input[type='submit'] {
+    color: #5236f4;
+    border-color: #5236f4;
+    cursor: pointer;
+}
+.post-form input[type='submit']:hover {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+    border-color: transparent;
+}
+.cat-title {
+    padding: 15px;
+    background-color: var(--primary-clr);
+    border-radius: .25rem;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--white-clr);
+}
+.categories {
+    margin-top: 25px;
+}
+.categories li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: var(--heading-clr);
+}
+.categories li a h4 {
+    font-weight: 400;
+}
+.categories li a:hover,
+.categories li a:hover h4 {
+    color: var(--primary-clr);
+}   
+/* end our post */
 /* start footer */
 footer {
     padding: 2rem 0;
