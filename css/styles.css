@@ -105,6 +105,8 @@ img {
 /* end basic rules */
 /* start header */
 .header {
+    position: relative;
+    z-index: 2;
     padding: 1.5rem 0;
 }
 .header-row {
@@ -147,8 +149,8 @@ nav input {
         background-color: var(--primary-clr);
     }
     #open-nav-input:checked ~ .nav-links {
-        -webkit-clip-path: polygon(100% 0, 0 1%, 0 100%, 100% 100%);
-        clip-path: polygon(100% 0, 0 1%, 0 100%, 100% 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     .close-nav-btn {
         display: block;
@@ -175,16 +177,70 @@ nav input {
     }
 }
 .nav-links ul li a {
+    position: relative;
     display: block;
     text-transform: uppercase;
     color: var(--white-clr);
+}
+.nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-clr);
+    transform: scale(0);
+    transition: all .2s linear;
+    transform-origin: center center;
 }
 @media screen and (max-width: 768px) {
     .nav-links ul li a {
         padding: 20px 0;
     }
 }
-.nav-links ul li a:hover {
-    color: var(--primary-clr);
+@media screen and (min-width: 768px) {
+    .nav-links ul li a:hover {
+        color: var(--primary-clr);
+    }
+    .nav-links ul li a:hover:after {
+        transform: scale(1);
+    }
 }
 /* end header */
+/* start home */
+.home {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-top: -77px;
+    background: linear-gradient(#517e86c4, #949fdf1a),
+    url(../img/banner1.png) center center no-repeat;
+    background-size: cover;
+}
+.home-content {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.home-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-clr);
+    margin-bottom: 8px;
+}
+.home-content h3 {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: #c8fff2;
+    margin-bottom: 18px;
+}
+.home-content p {
+    color: var(--white-clr);
+    margin-bottom: 18px;
+}
+/* end home */
