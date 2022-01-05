@@ -351,3 +351,30 @@ nav input {
     color: var(--primary-clr);
 }
 /* end testimonials */
+/* start cta section */
+.cta {
+    padding: 0 0 5rem;
+}
+.cta-box {
+    padding: 7rem 0;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0 , 0, 0, .7)),
+    url(../img/back1.png) center center no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    text-align: center;
+}
+.cta-box h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    color: var(--white-clr);
+    margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+    .cta-box h2 {
+        font-size: 3.7rem;
+        line-height: 1.1;
+    }
+}
+/* end cta section */
