@@ -262,7 +262,7 @@ nav input {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 30px;
 }
-.card {
+.course .card {
     padding: 1.5rem 1.25rem;
     background-color: #eee;
     border-radius: .25rem;
@@ -274,3 +274,46 @@ nav input {
     margin-bottom: 15px;
 }
 /* end course */
+/* start campus */
+.campus {
+    padding: 0 0 5rem;
+}
+.campus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
+}
+.campus .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: .25rem;
+}
+.campus-img {
+    display: block;
+    width: 100%;
+    height: 12rem;
+}
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.campus .card:hover .layer {
+    background-color: rgb(66 248 199 / 50%);
+}
+.layer .city {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: var(--white-clr);
+}
+.campus .card:hover .layer .city {
+    bottom: 50%;
+}
+/* end campus */
