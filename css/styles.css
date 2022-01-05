@@ -260,11 +260,16 @@ nav input {
     url(../img/banner.png) center center no-repeat;
 }
 .banner h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     font-weight: 700;
     text-align: center;
     color: var(--primary-clr);
+}
+@media screen and (min-width: 768px) {
+    .banner h2 {
+        font-size: 3rem;
+    }
 }
 /* end banner */
 /* start course */
