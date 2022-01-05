@@ -19,7 +19,6 @@
     color: var(--white-clr);
 }
 body {
-    background-color: #191919;
     font-weight: 400;
     font-size: 16px;
     line-height: 1;
@@ -104,3 +103,88 @@ img {
     border-color: transparent;
 }
 /* end basic rules */
+/* start header */
+.header {
+    padding: 1.5rem 0;
+}
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--white-clr);
+}
+.brand i {
+    color: var(--primary-clr);
+}
+nav input {
+    display: none;
+}
+.open-nav-btn {
+    font-size: 1.75rem;
+    color: var(--white-clr);
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .open-nav-btn,
+    .close-nav-btn {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 20rem;
+        height: 100vh;
+        padding: 4rem 20px;
+        background-color: var(--primary-clr);
+    }
+    #open-nav-input:checked ~ .nav-links {
+        -webkit-clip-path: polygon(100% 0, 0 1%, 0 100%, 100% 100%);
+        clip-path: polygon(100% 0, 0 1%, 0 100%, 100% 100%);
+    }
+    .close-nav-btn {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.75rem;
+        color: var(--white-clr);
+        cursor: pointer;
+    }
+    #close-nav-input:checked ~ .nav-links {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+}
+.nav-links ul li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .nav-links ul li {
+        display: block;
+        margin-right: 0;
+    }
+}
+.nav-links ul li a {
+    display: block;
+    text-transform: uppercase;
+    color: var(--white-clr);
+}
+@media screen and (max-width: 768px) {
+    .nav-links ul li a {
+        padding: 20px 0;
+    }
+}
+.nav-links ul li a:hover {
+    color: var(--primary-clr);
+}
+/* end header */
