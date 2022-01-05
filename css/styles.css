@@ -314,7 +314,40 @@ nav input {
 }
 /* end campus */
 /* start facilities */
+.facilities {
+    padding: 0 0 5rem;
+}
 .facilities .card-img {
     margin-bottom: 22px;
 }
 /* end facilities */
+/* start testimonials */
+.testimonials {
+    padding: 0 0 5rem;
+}
+.testimonials .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+}
+.testimonials .card {
+    display: flex;
+    padding: 1.5rem 1.25rem;
+    background-color: #eee;
+    border-radius: .25rem;
+}
+.testimonials .card .user-img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.user-comment .user-name {
+    margin: 15px 0;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.user-comment .stars li {
+    display: inline-block;
+    color: var(--primary-clr);
+}
+/* end testimonials */
