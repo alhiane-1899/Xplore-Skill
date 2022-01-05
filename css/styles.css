@@ -19,7 +19,6 @@
     color: var(--white-clr);
 }
 body {
-    height: 10000px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1;
@@ -378,3 +377,40 @@ nav input {
     }
 }
 /* end cta section */
+/* start footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+}
+.foot {
+    text-align: center;
+}
+.foot .foot-title {
+    margin-bottom: 30px;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.social-media li {
+    margin: 0  15px;
+}
+.social-media li a {
+    font-size: 1.25rem;
+    color: #5236f4;
+}
+.social-media li a:hover {
+    color: var(--primary-clr);
+}
+.made-by {
+    margin-bottom: 20px;
+}
+.made-by i,
+.copyright a {
+    color: var(--primary-clr);
+}
+.made-by a {
+    color: #5236f4;
+}
+/* end footer */
